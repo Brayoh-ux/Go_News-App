@@ -1,6 +1,6 @@
-from flask import Flask,render_template
+from flask import Flask,render_template, url_for
 from flask_bootstrap import Bootstrap
-from config import newsapi
+from config import newsapi,source_url
 
 app = Flask(__name__)
 
@@ -52,3 +52,27 @@ def bbc():
     mylist = zip(desc, news, img, readmore, published)
 
     return render_template('bbc.html', context = mylist)
+
+@app.route('/source')
+def source():
+    new_api = newsapi
+    sources_url = source_url.format(new_api)
+    source = new_api.get_sources(category='general')
+
+    sources = source['sources']
+
+    myid = []
+    name = []
+    url = []
+    desc = []
+
+    for a in range(len(sources)):
+        mysource = sources[a]
+        myid.append(mysource['id'])
+        name.append(mysource['name'])
+        url.append(mysource['url'])
+        desc.append(mysource['description'])
+
+    mylist = zip(myid, name, url, desc)
+
+    return render_template('source.html', context = mylist)

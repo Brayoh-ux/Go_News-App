@@ -4,13 +4,13 @@ from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
 
-# bootstrap = Bootstrap(app)
-# @app.route('/')
-# def index():
-#     newsapi = NewsApiClient(api_key='e0bd6d205f124726aa45065db44bedda')
-#     top_headlines = newsapi.get_top_headlines(sources="al-jazeera-english")
+bootstrap = Bootstrap(app)
+@app.route('/')
+def index():
+    newsapi = NewsApiClient(api_key='e0bd6d205f124726aa45065db44bedda')
+    top_headlines = newsapi.get_top_headlines(sources="al-jazeera-english")
 
-#     articles = top_headlines['articles']
+    articles = top_headlines['articles']
 
 #     desc = []
 #     news = []

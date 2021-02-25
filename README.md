@@ -3,7 +3,7 @@
 - BRIAN MBUGUA NDERITU
 
 ## Description
-Go News App is a web application that displays a list of various news sources, top headlines on the landing page and world leading news cster BBC. Clicking a news article will redirect the user to read it fully from the news source. It achieves this by using the News API.
+Go News App is a web application that displays a list of various news sources, top headlines on the landing page and world leading news caster BBC. Clicking a news article will redirect the user to read it fully from the news source. It achieves this by using the News API.
 
 You can view the site at: <a href="https://gonewsapp.herokuapp.com/">Heroku</a>
 
@@ -21,9 +21,9 @@ As a user I would like to:
 ## SetUp / Installation Requirements
 ### Prerequisites
 
-python3.6
-pip
-virtualenv
+- python3.6
+- pip
+- virtualenv
 
 ## Cloning
  - In your terminal:
